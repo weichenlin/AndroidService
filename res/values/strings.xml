@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroidService</string>
+    <string name="action_settings">Settings</string>
+    <string name="btn_start_service">Start</string>
+    <string name="btn_bind_service">Bind</string>
+    <string name="btn_remote_service">Remote</string>
+    <string name="label_enter_password">Enter Password:</string>
+    <string name="label_select_service_type">Select Service Type:</string>
+    <string name="label_result">Result:</string>
+
+</resources>
