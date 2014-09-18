@@ -41,12 +41,6 @@ public class Tools {
 			trial++;
 			String guess = randomString();
 			
-			/*
-			if (trial == 10000) {
-				guess = "111";
-				Log.e("going to check", "guess 111, md5=" + md5(guess) + ", passmd5=" + md5String);
-			}
-			*/
 			if (md5String.equals(md5(guess))) {
 				Log.e("Tools", "trial: " + trial + ", found password: " + guess);
 				return guess;

@@ -6,7 +6,7 @@
     <string name="btn_start_service">Start</string>
     <string name="btn_bind_service">Bind</string>
     <string name="btn_remote_service">Remote</string>
-    <string name="label_enter_password">Enter Password:</string>
+    <string name="label_enter_password">Enter Password(4 digital):</string>
     <string name="label_select_service_type">Select Service Type:</string>
     <string name="label_result">Result:</string>
 
