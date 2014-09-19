@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cc.aznc.demo.remotetimeservicehost"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    
+    <permission
+    	android:name="cc.aznc.demo.remotetimeservicehost.START_TIME_SERVICE"
+    	android:protectionLevel="normal" />
+    
+    <uses-permission
+    	android:name="cc.aznc.demo.remotetimeservicehost.START_TIME_SERVICE" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="cc.aznc.demo.remotetimeservicehost.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service 
+            android:name="cc.aznc.demo.remotetimeservicehost.RemoteTimeService"
+            android:process="cc.aznc.demo.remotetimeservicehost.RemoteTimeService"
+            android:exported="true"
+            android:permission="cc.aznc.demo.remotetimeservicehost.START_TIME_SERVICE" />
+    </application>
+
+</manifest>
