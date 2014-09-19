@@ -5,7 +5,6 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.IBinder;
 import android.util.Log;
 import android.view.Menu;
@@ -15,12 +14,11 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 	private String TAG = MainActivity.class.getSimpleName();
 	private TimeService timeService;
-	private Handler handler = new Handler();
 	
 	private TimeService.TimeUpdateObserver timeObserver = new TimeService.TimeUpdateObserver() {
 		@Override
 		public void onTimeServiceUpdate(final String serviceId, final String time) {
-			handler.post(new Runnable(){
+			runOnUiThread(new Runnable(){
 				@Override
 				public void run() {
 					updateTime(serviceId, time);
